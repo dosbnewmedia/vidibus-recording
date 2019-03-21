@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = '>= 1.3.6'
 
   s.add_dependency 'activesupport'
-  s.add_dependency 'mongoid', '~> 6'
+  s.add_dependency 'mongoid'
   s.add_dependency 'delayed_job_mongoid'
   s.add_dependency 'vidibus-uuid'
 

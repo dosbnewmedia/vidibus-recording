@@ -30,7 +30,7 @@ module Vidibus::Recording
       index({active: 1})
 
       validates :name, :presence => true
-      validates :stream, :format => {:with => /^rtmp.*?:\/\/.+$/}
+      validates :stream, :format => {:with => /\Artmp.*?:\/\/.+\z/}
 
       before_destroy :cleanup
 

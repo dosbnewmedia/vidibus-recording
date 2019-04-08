@@ -22,10 +22,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'delayed_job_mongoid'
   s.add_dependency 'vidibus-uuid'
 
-  s.add_development_dependency 'bundler', '>= 1.0.0'
+  s.add_development_dependency 'bundler'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rdoc'
-  s.add_development_dependency 'rspec', '~> 2'
+  s.add_development_dependency 'rspec'
   s.add_development_dependency 'rr'
   s.add_development_dependency 'simplecov'
 

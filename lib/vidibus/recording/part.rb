@@ -16,8 +16,8 @@ module Vidibus::Recording
     field :info, :type => Hash
     field :size, :type => Integer
     field :duration, :type => Integer
-    field :started_at, :type => DateTime
-    field :stopped_at, :type => DateTime
+    field :started_at, :type => Date
+    field :stopped_at, :type => Date
 
     validates :number, :presence => true
 

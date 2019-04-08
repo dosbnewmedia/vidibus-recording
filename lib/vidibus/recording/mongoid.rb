@@ -20,10 +20,10 @@ module Vidibus::Recording
       field :size, :type => Integer
       field :duration, :type => Integer
       field :error
-      field :scheduled_at, :type => DateTime
-      field :started_at, :type => DateTime
-      field :stopped_at, :type => DateTime
-      field :failed_at, :type => DateTime
+      field :scheduled_at, :type => Time
+      field :started_at, :type => Time
+      field :stopped_at, :type => Time
+      field :failed_at, :type => Time
       field :active, :type => Boolean, :default => false
       field :running, :type => Boolean, :default => false
 

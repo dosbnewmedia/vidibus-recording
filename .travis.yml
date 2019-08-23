@@ -22,4 +22,5 @@ after_script:
 #services: mongodb
 
 script:
+  - "bundle install"
   - "bundle exec rspec spec --format progress"

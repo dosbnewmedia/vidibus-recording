@@ -1,6 +1,26 @@
-services: mongodb
+language: ruby
 rvm:
-  - 2.4
   - 2.5
   - 2.6
-script: "bundle exec rspec spec --format progress"
+
+env:
+  global:
+    - MONGODB=3.0.15
+
+install:
+  - wget http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-${MONGODB}.tgz
+  - tar xzf mongodb-linux-x86_64-${MONGODB}.tgz
+  - ${PWD}/mongodb-linux-x86_64-${MONGODB}/bin/mongod --version
+
+before_script:
+  - mkdir ${PWD}/mongodb-linux-x86_64-${MONGODB}/data
+  - ${PWD}/mongodb-linux-x86_64-${MONGODB}/bin/mongod --dbpath ${PWD}/mongodb-linux-x86_64-${MONGODB}/data --logpath ${PWD}/mongodb-linux-x86_64-${MONGODB}/mongodb.log --fork
+
+after_script:
+  - pkill mongod
+
+#services: mongodb
+
+script:
+  - "bundle install"
+  - "bundle exec rspec spec --format progress"
